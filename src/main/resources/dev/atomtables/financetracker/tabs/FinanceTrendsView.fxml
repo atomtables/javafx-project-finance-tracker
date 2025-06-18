@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #001220;" stylesheets="@../design.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.atomtables.financetracker.views.FinanceTrendsView">
+   <children>
+      <VBox spacing="20" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <!-- Top Bar -->
+         <HBox alignment="CENTER_LEFT" prefHeight="101.0" spacing="20" style="-fx-background-color: #002420; -fx-background-radius: 0px 0px 20px 20px; -fx-padding: 15px;">
+            <ImageView fitHeight="70.0" fitWidth="72.0">
+               <image>
+                  <Image url="@../images/FinanceTracker.png" />
+               </image>
+            </ImageView>
+            <Label text="FinanceTracker" textFill="WHITE">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Region fx:id="spacer" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" layoutX="843.0" layoutY="9.0" prefHeight="84.0" prefWidth="415.0" spacing="24.0" style="-fx-background-color: #208060; -fx-background-radius: 20px;">
+               <children>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" onMouseClicked="#goHome">
+                     <image>
+                        <Image url="@../icons/home.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="200.0">
+                  </Separator>
+                  <ImageView fitHeight="44.0" fitWidth="44.0" onMouseClicked="#goLogs">
+                     <image>
+                        <Image url="@../icons/balance.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <ImageView fitHeight="44.0" fitWidth="44.0" onMouseClicked="#goTrends">
+                     <image>
+                        <Image url="@../icons/trends.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <Separator orientation="VERTICAL" prefHeight="200.0" />
+                  <ImageView fitHeight="44.0" fitWidth="44.0">
+                     <image>
+                        <Image url="@../icons/menu.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children>
+            </HBox>
+         </HBox>
+      </VBox>
+      <Label fx:id="escape" layoutX="17.0" layoutY="109.0" prefHeight="601.0" prefWidth="1249.0" text="example" textAlignment="CENTER" textFill="WHITE" wrapText="true">
+         <font>
+            <Font size="60.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

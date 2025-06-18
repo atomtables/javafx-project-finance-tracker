@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="720.0" prefWidth="1280.0" style="-fx-background-color: #001220;" stylesheets="@../design.css" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dev.atomtables.financetracker.views.SetupView">
+   <children>
+      <AnchorPane layoutX="4.0" layoutY="-1.0" prefHeight="101.0" prefWidth="1280.0" style="-fx-background-color: #002420; -fx-background-radius: 0px 0px 20px 20px;" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="70.0" fitWidth="72.0" layoutX="14.0" layoutY="15.0" AnchorPane.bottomAnchor="16.0" AnchorPane.leftAnchor="14.0" AnchorPane.topAnchor="15.0">
+               <image>
+                  <Image url="@../images/FinanceTracker.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="111.0" layoutY="19.0" text="FinanceTracker | Setup" textFill="WHITE" AnchorPane.bottomAnchor="22.0" AnchorPane.leftAnchor="111.0" AnchorPane.topAnchor="19.0">
+               <font>
+                  <Font size="48.0" />
+               </font>
+            </Label>
+            <Circle fill="#1f93ff00" layoutX="1243.0" layoutY="48.0" radius="17.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="33.0" />
+            <Circle fill="#1f93ff00" layoutX="1202.0" layoutY="48.0" radius="17.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="70.0" AnchorPane.topAnchor="33.0" />
+            <Circle fill="#1f93ff00" layoutX="1163.0" layoutY="48.0" radius="17.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="120.0" AnchorPane.topAnchor="33.0" />
+            <Circle fill="#1f93ff" layoutX="1124.0" layoutY="48.0" radius="17.0" stroke="DODGERBLUE" strokeType="INSIDE" strokeWidth="5.0" AnchorPane.bottomAnchor="34.0" AnchorPane.rightAnchor="170.0" AnchorPane.topAnchor="33.0" />
+         </children>
+      </AnchorPane>
+      <Label layoutX="43.0" layoutY="178.0" text="Welcome! Introduce yourself." textFill="WHITE" AnchorPane.leftAnchor="43.0">
+         <font>
+            <Font size="64.0" />
+         </font>
+      </Label>
+      <Label layoutX="52.0" layoutY="283.0" text="First Name" textFill="#ebebeb" AnchorPane.leftAnchor="52.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <Label layoutX="51.0" layoutY="404.0" text="Last Name" textFill="#ebebeb" AnchorPane.leftAnchor="52.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="firstName" layoutX="51.0" layoutY="320.0" AnchorPane.leftAnchor="52.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <TextField fx:id="lastName" layoutX="51.0" layoutY="440.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <Label layoutX="614.0" layoutY="279.0" text="Email" textFill="#ebebeb" AnchorPane.leftAnchor="652.0">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Label>
+      <TextField fx:id="email" layoutX="614.0" layoutY="315.0" AnchorPane.leftAnchor="652.0">
+         <font>
+            <Font size="36.0" />
+         </font>
+      </TextField>
+      <Button layoutX="1153.0" layoutY="637.0" mnemonicParsing="false" onAction="#stage1Complete" text="Continue" AnchorPane.bottomAnchor="48.0" AnchorPane.rightAnchor="34.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+      <Button layoutX="59.0" layoutY="636.0" mnemonicParsing="false" onAction="#back" text="Back" AnchorPane.bottomAnchor="48.0" AnchorPane.leftAnchor="34.0">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>
