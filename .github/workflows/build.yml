@@ -22,7 +22,7 @@ jobs:
         run: mvn clean javafx:jlink
 
       - name: Archive Windows jlink image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-windows
           path: target/app  # adjust to your jlinkImageName folder if different
@@ -43,7 +43,7 @@ jobs:
         run: mvn clean javafx:jlink
 
       - name: Archive macOS jlink image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-macos
           path: target/app  # adjust as needed
@@ -64,7 +64,7 @@ jobs:
         run: mvn clean javafx:jlink
 
       - name: Archive Linux jlink image
-        uses: actions/upload-artifact@v3
+        uses: actions/upload-artifact@v4
         with:
           name: app-linux
           path: target/app
