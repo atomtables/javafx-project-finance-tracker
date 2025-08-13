@@ -1,0 +1,70 @@
+name: Build JavaFX jlink images
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+
+jobs:
+  build-windows:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Build and create jlink image (Windows)
+        run: mvn clean javafx:jlink
+
+      - name: Archive Windows jlink image
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-windows
+          path: target/app  # adjust to your jlinkImageName folder if different
+
+  build-macos:
+    runs-on: macos-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Build and create jlink image (macOS)
+        run: mvn clean javafx:jlink
+
+      - name: Archive macOS jlink image
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-macos
+          path: target/app  # adjust as needed
+
+  build-linux:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v3
+
+      - name: Set up JDK 21
+        uses: actions/setup-java@v3
+        with:
+          java-version: 21
+          distribution: temurin
+
+      - name: Build and create jlink image (Linux)
+        run: mvn clean javafx:jlink
+
+      - name: Archive Linux jlink image
+        uses: actions/upload-artifact@v3
+        with:
+          name: app-linux
+          path: target/app
